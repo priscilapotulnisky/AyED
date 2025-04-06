@@ -2,7 +2,7 @@ package tp1.ejercicio7;
 import java.util.*;
 public class Sucesion {
 
-	private static void calcularSucesionRec (List<Integer> lista,int n){
+	private static void calcularSucesionRec (List<Integer> lista, int n){
 		lista.add(n);
 		if(n > 1) {
 			if(n % 2 == 0) 

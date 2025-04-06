@@ -14,9 +14,8 @@ public class Queue<T> extends Sequence {
 		this.data.add(dato);
 	}
 	
-	public List<T> dequeue(){
-		this.data.remove(0);
-		return this.data;
+	public T dequeue() {
+	    return this.data.remove(0);
 	}
 	
 	public T head () {

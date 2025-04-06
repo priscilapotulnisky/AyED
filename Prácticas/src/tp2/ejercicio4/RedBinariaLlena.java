@@ -2,7 +2,7 @@ package tp2.ejercicio4;
 import tp2.ejercicio1.*;
 public class RedBinariaLlena {
 
-	BinaryTree<Integer> arbol;
+	private BinaryTree<Integer> arbol;
 	
 	public RedBinariaLlena(BinaryTree<Integer> arbol) {
 		this.arbol = arbol;

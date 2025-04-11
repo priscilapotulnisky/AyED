@@ -2,6 +2,7 @@ package tp2.ejercicio6v3;
 import tp2.ejercicio1.*;
 public class Transformacion {
 	
+	//un método devuelve el valor que debe contener cada nodo y otro lo arma
 	private BinaryTree<Integer> arbol;
 	
 	public Transformacion(BinaryTree<Integer> arbol) {

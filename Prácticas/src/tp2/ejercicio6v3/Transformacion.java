@@ -13,6 +13,7 @@ public class Transformacion {
 			return null;
 		return armarArbol(this.arbol);
 	}
+	
 	private int sumaRecursiva(BinaryTree<Integer> arbol) {
 		int suma = 0;
 		if(arbol.isLeaf())

@@ -57,6 +57,20 @@ public class GeneralTree<T>{
 			children.remove(child);
 	}
 	
+	public List<T> preOrden(){
+		List<T> lista = new LinkedList<T>();
+		this.preOrden(lista);
+		return lista;
+	}
+	
+	private void preOrden(List<T> l) {
+		l.add(this.getData());
+		List<GeneralTree<T>> children = this.getChildren();
+		for(GeneralTree<T> child: children)
+			child.preOrden(l);
+		
+	}
+	
 	public int altura() {	 
 			
 		return 0;

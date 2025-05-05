@@ -1,13 +1,15 @@
-package tp3.ejercicio5;
+package tp3.ejercicio6;
 
 import java.util.LinkedList;
 import java.util.List;
 
-public class Test {
+import tp3.ejercicio5.GeneralTree;
 
-	public static void main (String[]args) {
-		// Crear los nodos
-	    GeneralTree<Integer> a1 = new GeneralTree<>(1); // Raíz
+public class Main {
+
+	public static void main(String[] args) {
+		
+		GeneralTree<Integer> a1 = new GeneralTree<>(1); // Raíz
 	    GeneralTree<Integer> a2 = new GeneralTree<>(2); // Hijo de la raíz
 	    GeneralTree<Integer> a3 = new GeneralTree<>(31); // Hijo de la raíz
 	    GeneralTree<Integer> a4 = new GeneralTree<>(45); // Hijo de la raíz
@@ -33,13 +35,10 @@ public class Test {
 	    hijosA3.add(a8);
 	    a3.setChildren(hijosA3);
 	    
-	    System.out.println(a1.esAncestro(31, 123)); //deberia dar true
-	    System.out.println(a1.esAncestro(31, 53));//deberia dar true
-	    System.out.println(a1.esAncestro(2, 50));//deberia dar true
-	    System.out.println(a1.esAncestro(45, 12));//deberia dar false
-	    System.out.println(a1.esAncestro(983, 233));//deberia dar false
+	    RedDeAguaPotable red = new RedDeAguaPotable(a1);
 	    
-	   
-	    
+	    System.out.println(red.minimoCaudal(1000));
+
 	}
+
 }

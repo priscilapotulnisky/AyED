@@ -69,7 +69,6 @@ public class GeneralTree<T>{
 		List<GeneralTree<T>> children = this.getChildren();
 		for(GeneralTree<T> child: children)
 			child.preOrden(l);
-		
 	}
 	
 	//se podria hacer un recorrido por niveles y contar cuantos tiene, pero si piden el camino debería cambiar toda la implementación

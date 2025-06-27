@@ -22,7 +22,6 @@ public class MapaTest {
 		grafo.connect(tokio, bsas, 10);
 		grafo.connect(asuncion, madrid, 10);
 		grafo.connect(asuncion, caracas, 2);
-		grafo.connect(caracas, tokio, 2);
 		grafo.connect(caracas, madrid, 2);
 		grafo.connect(madrid, tokio, 60);
 		grafo.connect(paris, roma, 4);
@@ -30,10 +29,22 @@ public class MapaTest {
 		grafo.connect(paris, tokio, 35);
 		
 		Mapa m = new Mapa(grafo);
+		//--------INCISO A-------
 		System.out.println(m.devolverCaminos("Buenos Aires", "Tokio"));
+		//--------INCISO B-------
 		List<String> listaCiudades = new LinkedList<>();
-		listaCiudades.add("Santiago");
-		System.out.println(m.devolverCaminoExceptuando("Buenos Aires", "Tokio", listaCiudades));
+		listaCiudades.add("Roma");
+		listaCiudades.add("Madrid");
+		listaCiudades.add("Tokio");
+		System.out.println(m.devolverCaminoExceptuando("Paris", "Buenos Aires", listaCiudades));
+		//--------INCISO C-------
+		System.out.println(m.caminoMasCorto("Buenos Aires", "Tokio"));
+		System.out.println(m.caminoMasCortoOpcion2("Buenos Aires", "Tokio"));
+		//--------INCISO D-------
+		System.out.println(m.caminoSinCargarCombustible("Paris", "Buenos Aires", 45));
+		//--------INCISO E-------
+		System.out.println(m.caminoConMenorCargaDeCombustible("Tokio","Madrid", 20));
 		
 	}
+	
 }

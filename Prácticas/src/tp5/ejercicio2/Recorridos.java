@@ -40,13 +40,13 @@ public class Recorridos<T> {
 		List<T> lista = new LinkedList<>();
 		for(int i = 0; i < grafo.getSize(); i++) {
 			if(!marca[i]) {
-				bfsRecursivo(i, grafo, lista, marca);
+				bfs(i, grafo, lista, marca);
 			}
 		}
 		return lista;	
 	}
 	
-	private void bfsRecursivo(int i, Graph<T> grafo,List<T> lista, boolean [] marca) {
+	private void bfs(int i, Graph<T> grafo,List<T> lista, boolean [] marca) {
 		Queue<Vertex<T>> q = new Queue<Vertex<T>>();
 		q.enqueue(grafo.getVertex(i));
 		marca[i] = true;

@@ -1,5 +1,7 @@
 package tp5.ejercicio5;
 
+import java.util.Objects;
+
 public class Persona {
 
 	private String nombre;
@@ -44,6 +46,29 @@ public class Persona {
 
 	public void setEsEmpleado(boolean esEmpleado) {
 		this.esEmpleado = esEmpleado;
+	}
+	
+	@Override
+    public boolean equals(Object o) {               
+        if ((o != null) && (o instanceof Persona)){ 
+        	Persona p = (Persona) o;
+        	return  this.getNombre().equals(p.getNombre())  &&
+        			this.getDomicilio().equals(p.getDomicilio()) &&
+        			this.isCobro() == p.isCobro() &&
+        			this.isEsEmpleado() == p.isEsEmpleado();
+        }
+        return false;
+    }
+	
+	@Override
+    public int hashCode() {
+        return Objects.hash(nombre, domicilio, esEmpleado, cobro);
+    }
+
+	@Override
+	public String toString() {
+		return "Persona [nombre=" + nombre + ", domicilio=" + domicilio + ", esEmpleado=" + esEmpleado + ", cobro="
+				+ cobro + "]";
 	}
 	
 	

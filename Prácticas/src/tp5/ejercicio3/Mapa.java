@@ -40,9 +40,6 @@ public class Mapa {
 		}
 		if(!ok)
 			lista.remove(lista.size()-1);
-		
-		
-		
 		return ok;
 			
 	}
@@ -55,7 +52,7 @@ public class Mapa {
 		if(!this.mapaCiudades.isEmpty()) {
 			Vertex<String> v1 = this.mapaCiudades.search(ciudad1);
 			Vertex<String> v2 = this.mapaCiudades.search(ciudad2);
-			if(v1 != null && v2 != null) 
+			if(v1 != null && v2 != null && !ciudades.contains(v2.getData()) && !ciudades.contains(v1.getData()))
 				devolverCaminoExceptuandoRecursivo(v1, v2, this.mapaCiudades, lista, marcas, ciudades);
 		}
 		return lista;
